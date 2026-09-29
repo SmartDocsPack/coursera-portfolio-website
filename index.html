@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alex Rivera - Portfolio</title>
+  <link rel="stylesheet" href="./style.css"/>
+  <script src="./script.js"></script>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div id="home">
+      <div class="profile_name">
+        Alex Rivera
+        <div class="contact_info">
+          <img src="html_finalprojimages/envelope.png" alt="Email icon"/>
+          alex.rivera@example.com
+        </div>
+        <div style="clear:both;"></div>
+        <div class="contact_info">
+          <img src="html_finalprojimages/phone.png" alt="Phone icon"/>
+          +13456764598
+        </div>
+      </div>
+      <div class="topdiv">
+        <a class="topmenu" href="#about-me">About Me</a>
+        <a class="topmenu" href="#skills">Skills</a>
+        <a class="topmenu" href="#projects">Project Details</a>
+        <a class="topmenu" href="#recommendations">Recommendations</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Me Section -->
+  <section id="about-me" class="container">
+    <div>
+      <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400" class="profile_image" alt="Profile Picture"/>
+    </div>
+    <div>
+      <h1>
+        Hi, I'm Alex Rivera! <img src="html_finalprojimages/waving-hand.png" width="40px" alt="Waving hand"/>
+      </h1>
+      <p>
+        I am an enthusiastic full stack developer with 3 years of experience building modern web applications, scalable REST APIs, and responsive user interfaces. I love turning complex challenges into clean, accessible digital experiences and deploying cloud-native architectures.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div style="clear:both;"></div>
+
+    <div class="all_skills">
+      <div class="skill">
+        <img src="html_finalprojimages/html5.png" alt="HTML5"/>
+        <h6>HTML5</h6>
+        <p>3 years experience</p>
+      </div>
+
+      <div class="skill">
+        <img src="html_finalprojimages/CSS3.png" alt="CSS3"/>
+        <h6>CSS3</h6>
+        <p>3 years experience</p>
+      </div>
+
+      <div class="skill">
+        <img src="html_finalprojimages/js.jpeg" alt="JavaScript"/>
+        <h6>JavaScript</h6>
+        <p>3 years experience</p>
+      </div>
+
+      <div class="skill">
+        <img src="html_finalprojimages/react.png" alt="React"/>
+        <h6>React</h6>
+        <p>2 years experience</p>
+      </div>
+
+      <div class="skill">
+        <img src="html_finalprojimages/node.png" alt="Node.js"/>
+        <h6>Node.js</h6>
+        <p>2 years experience</p>
+      </div>
+
+      <div class="skill">
+        <img src="html_finalprojimages/java.png" alt="Java"/>
+        <h6>Java</h6>
+        <p>1 year experience</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div style="clear:both;"></div>
+
+    <div id="projects-container" class="projects-container">
+      <div class="project-card">
+        <h3>E-Commerce Analytics Dashboard</h3>
+        <ul>
+          <li>Developed a responsive dashboard monitoring real-time sales metrics, customer conversion, and inventory using React and Chart.js.</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <h3>Autonomous Task Manager API</h3>
+        <ul>
+          <li>Engineered a secure RESTful backend service with Node.js and Express featuring JWT authentication and automated email reminders.</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <h3>Weather Forecast Progressive App</h3>
+        <ul>
+          <li>Built an interactive weather tracking application integrating open-source weather APIs with location caching and offline capabilities.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recommendations Section -->
+  <section id="recommendations">
+    <h2>Recommendations</h2>
+    <div style="clear:both;"></div>
+
+    <div class="all_recommendations" id="all_recommendations">
+      <div class="recommendation">
+        <span>&#8220;</span>
+        Alex is a dedicated software engineer who consistently delivers reliable code and brings creative problem-solving to every front-end challenge we tackle together.
+        <span>&#8221;</span>
+      </div>
+
+      <div class="recommendation">
+        <span>&#8220;</span>
+        Working with Alex was seamless. Their deep knowledge of JavaScript and clean UI design transformed our customer portal within just a few sprints.
+        <span>&#8221;</span>
+      </div>
+
+      <div class="recommendation">
+        <span>&#8220;</span>
+        An exceptional collaborator who quickly grasps complex system architectures and always ensures project milestones are reached ahead of time.
+        <span>&#8221;</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recommendation Form -->
+  <section id="contact">
+    <div class="flex_center">
+      <fieldset>
+        <legend class="introduction">Leave a Recommendation</legend>          
+        <input type="text" placeholder="Name (Optional)"> <br/>
+        <textarea id="new_recommendation" cols="500" rows="5" placeholder="Write your recommendation here..."></textarea>
+        <div class="flex_center">
+          <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
+        </div>
+      </fieldset>
+    </div>
+  </section>
+
+  <!-- Home Icon -->
+  <div class="iconbutton">
+    <a href="#home">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    </a>
+  </div>
+
+  <!-- Popup Confirmation -->
+  <div class="popup" id="popup" class="flex_center">
+    <img src="html_finalprojimages/checkmark--outline.svg"/>
+    <h3>Thanks for leaving a recommendation!</h3>
+    <button onclick="showPopup(false)">Ok</button>
+  </div>
+</body>
+</html>
